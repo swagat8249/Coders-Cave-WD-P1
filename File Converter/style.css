@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  background: #f3f980;
+}
+.container{ 
+  width: 900px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 30px 25px 40px;
+  box-shadow: 0 8px 14px rgba(0,0,0,0.05);
+}
+.container :where(textarea, input, select, button){
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
+}
+.container :where(textarea, input)::placeholder{
+  color: #aaa;
+}
+.container :where(textarea, input):focus{
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+}
+.container textarea{
+  height: 400px;
+  resize: none;
+  padding: 15px 15px;
+  font-size: 20px;
+  border: 3px solid #cccccc;
+}
+.container .file_options{
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.file_options .option{
+  width: calc(100% / 2 - 8px);
+}
+.option label{
+  font-size: 17px;
+}
+.option :where(input, .select_menu){
+  height: 40px;
+  padding: 0 13px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1.2px solid #bfbfbf;
+}
+.option .select_menu select{
+  height: 40px;
+  background: none;
+}
+.container .btn{
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 17px 0;
+  margin-top: 15px;
+  background: #51cce1;
+  font-weight:bolder;
+}
+.btn:hover{
+  background: #56f32e;
+}
+textarea:valid ~ .btn{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
